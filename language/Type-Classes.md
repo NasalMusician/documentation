@@ -19,7 +19,7 @@ instance showBoolean :: Show Boolean where
   show true = "true"
   show false = "false"
 
-instance showArray :: (Show a) => Show (Array a) where
+instance showArray :: Show a => Show (Array a) where
   show xs = "[" <> joinWith ", " (map show xs) <> "]"
 
 example = show [true, false]
@@ -43,7 +43,7 @@ This code example defines a `MonadFail` class with a `Monad` superclass: any typ
 Superclass instances will be used when searching for an instance of a subclass. For example, in the code below, the `Applicative` constraint introduced by the `pure` function can be discharged since `Applicative` is a superclass of `Monad`, which is in turn a superclass of `MonadFail`:
 
 ```purescript
-assert :: forall m. (MonadFail m) => Boolean -> m Unit
+assert :: forall m. MonadFail m => Boolean -> m Unit
 assert true = pure unit
 assert false = fail "Assertion failed"
 ```
@@ -109,7 +109,7 @@ Currently, the following type classes can be derived:
 Some type classes can be automatically solved by the PureScript Compiler without requiring you place a PureScript statement, like `derive instance`, in your source code.
 
 ``` purescript
-foo :: forall t. (Warn "Custom warning message") => t -> t
+foo :: forall t. Warn "Custom warning message" => t -> t
 foo x = x
 ```
 
