@@ -2,16 +2,23 @@
 
 The type system defines the following types:
 
-- Primitive Types: `Int`, `Number`, `String`, `Char`, `Boolean`
-- Arrays
-- Records
-- Tagged Unions
-- Newtypes
-- Functions
-- Polymorphic Types
-- Constrained Types
-- Type Synonyms
-- Rows
+- [Primitive Types](#primitive-types): [`Int`](#integers), `Number`, `String`, `Char`, `Boolean`
+- [Integers](#integers)
+- [Arrays](#arrays)
+- [Records](#records)
+- [Tagged Unions](#tagged-unions)
+- [Newtypes](#newtypes)
+- [Functions](#functions)
+- [Polymorphic Types](#polymorphic-types)
+- [Row Polymorphism](#row-polymorphism)
+- [Rank N Types](#rank-n-types)
+- [Rows](#rows)
+- [Type Synonyms](#type-synonyms)
+- [Constrained Types](#constrained-types)
+- [Type Annotations](#type-annotations)
+- [Kind System](#kind-system)
+- [Row Kinds](#row-kinds)
+- [Quantification](#quantification)
 
 ## Primitive Types
 
