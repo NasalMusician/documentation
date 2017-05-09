@@ -115,8 +115,10 @@ foo x = x
 
 Currently, the following type classes can be automatically solved:
 
-- `Warn`
-- [`IsSymbol`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/1.0.0/docs/Type.Data.Symbol#t:IsSymbol)
-- [`CompareSymbol`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/1.0.0/docs/Type.Data.Symbol#t:CompareSymbol)
-- [`AppendSymbol`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/1.0.0/docs/Type.Data.Symbol#t:AppendSymbol)
-- `Union`, which computes the union of two rows of types
+- [`RowCons label a in out`](https://pursuit.purescript.org/builtins/docs/Prim#t:RowCons), which adds a typed label to a row
+- [`Union r1 r2 r3`](https://pursuit.purescript.org/builtins/docs/Prim#t:Union), which computes the union of two rows of types
+- [`IsSymbol sym`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/2.0.0/docs/Type.Data.Symbol#t:IsSymbol)
+- [`CompareSymbol lhs rhs out`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/2.0.0/docs/Type.Data.Symbol#t:CompareSymbol)
+- [`AppendSymbol lhs rhs out`](https://pursuit.purescript.org/packages/purescript-typelevel-prelude/2.0.0/docs/Type.Data.Symbol#t:AppendSymbol)
+- [`Warn "..."`](https://pursuit.purescript.org/builtins/docs/Prim#t:Warn)
+- [`Fail "..."`](https://pursuit.purescript.org/builtins/docs/Prim#t:Fail)
